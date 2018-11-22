@@ -1,0 +1,43 @@
+{
+  "name": "indexeddb-api",
+  "version": "1.0.0",
+  "description": "A common API for IndexedDB.",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.js --open-page 'example/index.html'",
+    "pro": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "author": "yinzhigang",
+  "license": "ISC",
+  "env": [
+    "development",
+    "production"
+  ],
+  "runEnv": "development",
+  "devServer": {
+    "contentBase": "./",
+    "port": 9999,
+    "hot": true
+  },
+  "devEntry": {
+    "index": "./example/index.js"
+  },
+  "proEntry": {
+    "index": "./example/index.js",
+    "database": "./src/database.js"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "file-loader": "^2.0.0",
+    "url-loader": "^1.1.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "cross-env": "^5.2.0"
+  }
+}
