@@ -6,13 +6,13 @@
 
     export default {
       dbConfig: {
-        dbName: "face",
+        dbName: "company",
         dbVersion: 1
       },
       storeConfig: {
         storeName: "person",
         keyPath: "id",
-        indexList: ["id"]
+        indexList: ["id", "name", "age"]
       }
     }
 
